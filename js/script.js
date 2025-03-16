@@ -9,7 +9,7 @@ function handleVideoAutoplay(video, triggerElement) {
       trigger: triggerElement,
       start: "top 30%",
       end: "bottom 30%",
-      markers: true,
+    //   markers: true,
       toggleActions: "play reverse play reverse",
       onEnter: () => {
         video.setAttribute("autoplay", "true"); // autoplay 속성 추가
@@ -48,7 +48,7 @@ ScrollTrigger.create({
     end: "bottom bottom",
     pin: "#work .order-num",
     anticipatePin: 1,
-    markers: true,
+    // markers: true,
 });
 
 // 각각의 .web-work 스크롤 진입 시 .num-count의 숫자 변경
