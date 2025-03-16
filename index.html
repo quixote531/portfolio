@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juwon's Portfolio</title>
+    <!-- Font -->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis.JS -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <!-- jQuery CDN-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- jQuery throttle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <!-- JS -->
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- ================ header ================= -->
+        <header class="header">
+            <div class="container">
+                <h1><a href="#">Juwon's Portfolio</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Intro</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ================ //header ================= -->
+        <!-- ================ main ================-->
+        <main class="main">
+                <!-- intro -->
+                <section id="intro" class="section">
+                   <div class="container">
+                        <div class="intro-box">
+                            <div class="intro-row" data-img="#img1">
+                                <div class="intro-word">
+                                    <h2>I'm</h2>
+                                </div>
+                            </div>
+                            <div class="intro-row" data-img="#img2">
+                                <div class="intro-word">
+                                    <p>User Interface, User Experience, Web & App Design</p>
+                                    <h2>Juwon</h2>
+                                </div>
+                            </div>
+                            <div class="intro-row" data-img="#img3">
+                                <div class="intro-word">
+                                    <h2>Web Publisher</h2>
+                                </div>
+                            </div>
+                            <div class="intro-row" data-img="#img4">
+                                <div class="intro-word">
+                                    <p>Responsive Web, Wireframe, Prototype</p>
+                                    <h2>Designer</h2>
+                                </div>
+                            </div>
+                        </div>
+                   </div> 
+                   <div class="cursor">
+                    <div class="img-box">
+                        <div id="img1" class="image">
+                            <img src="images/cursor_man.png" alt="">
+                        </div>
+                        <div id="img2" class="image">
+                            <img src="images/cursor_juwon_3.jpg" alt="">
+                        </div>
+                        <div id="img3" class="image">
+                            <img src="images/cursor_code.jpg" alt="">
+                        </div>
+                        <div id="img4" class="image">
+                            <img src="images/cursor_mobile.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- about me --> 
+                <section id="about" class="section">
+                   <div class="about-top">
+                        <div class="container">
+                            <div class="title-area">
+                                <h2>About Me</h2>
+                                <p>Who's Juwon?</p>
+                            </div>
+                            <div class="contents-area">
+                                <div class="top-area">
+                                    <p class="profile-desc">
+                                        As a <strong>UI/UX designer</strong>,<br>
+                                        I focus on creating better services<br>and impactful digital experiences.
+                                    </p>
+                                    <div class="profile-img">
+                                        <img src="images/profile-sample.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="about-bottom">
+                        <div class="container">
+                            <div class="about-list-wrap">
+                                <div class="about-list">
+                                    <p class="about-list-tit">김 주 원</p>
+                                    <ul class="about-list-txt">
+                                        <li>1995.05.03.</li>
+                                        <li>010.8539.1628</li>
+                                        <li>river1628@gmail.com</li>
+                                    </ul>
+                                    <ul class="sns">
+                                        <li><a href="#"><img src="images/square-x-twitter.png" alt=""></a></li>
+                                        <li><a href="#"><img src="images/square-facebook.png" alt=""></a></li>
+                                        <li><a href="#"><img src="images/square-gitlab.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                                <div class="about-list">
+                                    <p class="about-list-tit">Skills</p>
+                                    <ul class="about-list-txt">
+                                        <li>Adobe Photoshop</li>
+                                        <li>Adobe Illustrator</li>
+                                        <li>Figma</li>
+                                        <li>HTML, CSS</li>
+                                        <li>JavaScript, jQuery, GSAP</li>
+                                    </ul>
+                                </div>
+                                <div class="about-list">
+                                    <p class="about-list-tit">Experience</p>
+                                    <ul class="about-list-txt">
+                                        <li>2024. 10. - 2025.03. UI/UX 웹디자이너&웹퍼블리셔 양성과정</li>
+                                        <li>2014. 03. - 2020.02. 부경대학교 해양공학과 졸업</li>
+                                        <li>2018. 07 - 2018.11. LINC+ 캡스톤디자인경진대회 우수상, 교내 대상</li>
+                                        <li>2018. 01. 미국 실리콘밸리 해외탐방 프로그램 기획 및 팀장</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </section>
+                <!-- web publishing -->
+                <section id="work" class="section">
+                    <div class="container">    
+                        <div class="title-area">
+                            <h2>Web Publishing</h2>
+                            <p>기존 웹사이트의 클론코딩과 리디자인 작업물입니다.</p>
+                        </div>
+                        <div class="contents-area">
+                            <div class="left-part">
+                                <div class="order-num">
+                                    <span class="num">0</span>
+                                    <div class="num-count">
+                                        <span class="num">1.</span>
+                                        <span class="num">2.</span>
+                                        <span class="num">3.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-part">
+                                <div class="scroll-area">
+                                    <div class="web-work">
+                                        <div class="web-box">
+                                            <div class="web-bg">
+                                                <img src="images/genie_bg.jpg" alt="">
+                                            </div>
+                                            <div class="web-video">
+                                                <video src="images/genie_screen-rec.mp4" autoplay muted loop></video>
+                                            </div>
+                                        </div>
+                                        <div class="web-desc">
+                                            <div class="desc-top">
+                                                <p>Web Design</p>
+                                            </div>
+                                            <div class="desc-bottom">
+                                                <p>GENIE MUSIC</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="https://www.genie.co.kr/">
+                                                            <span>Original</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://genie-redesigned.netlify.app/">
+                                                            <span>Redesign</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Process</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="web-work">
+                                        <div class="web-box">
+                                            <div class="web-bg">
+                                                <img src="images/issac_bg.jpg" alt="">
+                                            </div>
+                                            <div class="web-video">
+                                                <video src="images/issac_rec.mp4" muted loop></video>
+                                            </div>
+                                        </div>
+                                        <div class="web-desc">
+                                            <div class="desc-top">
+                                                <p>Clone Coding</p>
+                                            </div>
+                                            <div class="desc-bottom">
+                                                <p>Issac Toast</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Original</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Clone</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="web-work">
+                                        <div class="web-box">
+                                            <div class="web-bg">
+                                                <img src="images/genie_bg-unsplash.jpg" alt="">
+                                            </div>
+                                            <div class="web-video">
+                                                <video src="images/genie_screen-rec.mp4" autoplay muted loop></video>
+                                            </div>
+                                        </div>
+                                        <div class="web-desc">
+                                            <div class="desc-top">
+                                                <p>Web Design</p>
+                                            </div>
+                                            <div class="desc-bottom">
+                                                <p>GENIE MUSIC</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Original</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Redesign</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>Process</span>
+                                                            <img src="images/top-right.png" alt="arrow">
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- design work -->
+                <section id="design" class="section">
+                    <div class="container">
+                        <div class="title-area">
+                            <h2>Design Work</h2>
+                            <p>포토샵, 일러스트레이터, 피그마로 제작한 앱, 로고, 배너, 상세페이지 디자인 작업물입니다.</p>
+                        </div>
+                        <div class="contents-area">
+                            <ul>
+                                <li>
+                                    <div class="subject">
+                                        <span class="num">01</span>
+                                        <h3>App Design</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4>findoc<span>파인닥</span></h4>
+                                        <p>스마트헬스케어를 주제로 기존 앱서비스를 분석한 후, 사용자의 편의성과 접근성을<br>개선하기 위해 UI/UX기획 및 디자인을 진행하였습니다.</p>
+                                        <div class="img-wrap">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="more-btn">
+                                            <a href="#">
+                                                <p>View More</p>
+                                                <img src="images/top-right.png" alt="arrow">
+                                           </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="subject">
+                                        <span class="num">02</span>
+                                        <h3>Banner Design</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4>ShakeShack<span>쉐이크쉑</span></h4>
+                                        <p>포토샵을 활용하여 광고 배너를 제작하였습니다.</p>
+                                        <div class="img-wrap">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="more-btn">
+                                            <a href="#">
+                                                <p>View More</p>
+                                                <img src="images/top-right.png" alt="arrow">
+                                           </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="subject">
+                                        <span class="num">03</span>
+                                        <h3>Banner Design</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="subject">
+                                        <span class="num">04</span>
+                                        <h3>Logo Mockups</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="subject">
+                                        <span class="num">05</span>
+                                        <h3>Detail Pages</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+        </main>
+        <!-- ================ //main ================-->
+        <!-- ================ footer ================-->
+        <footer class="footer section">
+            <div class="container">
+                <div class="footer-box">
+                    <div class="footer-row">
+                        <div class="footer-word">
+                            <p>Want to</p>
+                        </div>
+                    </div>
+                    <div class="footer-row">
+                        <div class="footer-word">
+                            <p>reach out?</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p><i class="fa-solid fa-envelope" style="color: #eee8e1;"></i>river1628@gmail.com</p>
+                        <p><i class="fa-solid fa-phone" style="color: #eee8e1;"></i>010.8539.1628</p>
+                        <p>&copy; 2025. Juwon Kim</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ================ //footer ================-->
+    </div>
+</body>
+</html>
