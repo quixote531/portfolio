@@ -279,6 +279,24 @@ body {
     #intro .intro-box .intro-row .intro-word p {
         display: none;
     }
+    @media screen and (max-width: 480px) {
+        #intro .intro-box {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex:1 0 0;
+        }
+        #intro .intro-box .intro-row .intro-word h2 {
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: -2px;
+        }
+    }
+
+
+
 
     /* 커서 이미지 */
     .cursor .img-box {
@@ -386,7 +404,9 @@ body {
 
 
 /* 웹퍼블리싱 영역 */
-#work {}
+#work {
+    display: none;
+}
 #work .container {}
 #work .contents-area {
     display: flex;
