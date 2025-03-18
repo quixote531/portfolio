@@ -462,9 +462,6 @@ body {
         right: 0px;
         width: 380px;
         height: 380px;
-        overflow: hidden;
-        margin: 20px 0 0;
-        z-index: 5;
     }
     
     #about .about-bottom .about-list-wrap {
@@ -489,9 +486,6 @@ body {
         right: 0px;
         width: 350px;
         height: 350px;
-        overflow: hidden;
-        margin: 20px 0 0;
-        z-index: 5;
     }
 }
 @media screen and (max-width: 1060px) {
@@ -500,13 +494,10 @@ body {
     }
     #about .contents-area .top-area .profile-img{
         position: absolute;
-        top: 190px;
+        top: 180px;
         right: 0px;
         width: 350px;
         height: 350px;
-        overflow: hidden;
-        margin: 0;
-        z-index: 5;
     }
 }
 @media screen and (max-width: 940px) {
@@ -519,6 +510,9 @@ body {
     }
 }
 @media screen and (max-width: 700px) {
+    #about .title-area p {
+        font-size: 13px;
+    }
     #about .contents-area .top-area .profile-desc{
         font-size: 32px;
         letter-spacing: -1px;
@@ -526,6 +520,95 @@ body {
     #about .about-bottom .about-list .about-list-txt li span {
         display: block;
         margin-bottom: 6px;
+    }
+    #about .about-bottom .about-list .about-list-tit {
+        font-size: 18px;
+    }
+    #about .about-bottom .about-list .about-list-txt {
+        font-size: 15px;
+    }
+    #about .about-bottom .about-list .sns li a img {
+        height: 32px;
+    }
+}
+@media screen and (max-width: 650px) {
+    #about .about-bottom .about-list-wrap {
+        padding: 90px 12px 70px;
+        gap: 26px;
+    }
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 250px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 150px;
+        right: 0px;
+        width: 330px;
+        height: 330px;
+    }
+}
+@media screen and (max-width: 560px) {
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 260px;
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+    #about .contents-area .top-area .profile-desc strong{
+        font-size: 31px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 130px;
+        right: 0px;
+        width: 330px;
+        height: 330px;
+    }
+}
+@media screen and (max-width: 490px) {
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 220px;
+        font-size: 21px;
+        letter-spacing: -1px;
+    }
+    #about .contents-area .top-area .profile-desc strong{
+        font-size: 26px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 90px;
+        right: 0px;
+        width: 300px;
+        height: 300px;
+    }
+    #about .about-bottom .about-list .about-list-tit {
+        font-size: 18px;
+    }
+    #about .about-bottom .about-list .about-list-txt {
+        font-size: 12px;
+    }
+    #about .about-bottom .about-list .sns li a img {
+        height: 32px;
+    }
+}
+@media screen and (max-width: 390px) {
+    #about .about-bottom .about-list-wrap {
+        padding: 90px 12px 70px;
+        gap: 26px;
+    }
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 180px;
+        font-size: 18px;
+        letter-spacing: -1px;
+    }
+    #about .contents-area .top-area .profile-desc strong{
+        font-size: 22px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -536,7 +619,7 @@ body {
 /* 웹퍼블리싱 영역 */
 
 #work {
-    display: none;
+    /* display: none; */
 }
 #work .container {}
 #work .contents-area {
@@ -687,7 +770,7 @@ body {
 
 /* 디자인작업 영역 */
 #design {
-    display: none;
+    /* display: none; */
 }
 #design .container {}
 #design .contents-area {}
@@ -820,7 +903,7 @@ body {
     height: 580px;
     background-color: var(--black-color);
     padding: 0;
-    display: none;
+    /* display: none; */
 }
 .footer .container {
     padding: 24px;
