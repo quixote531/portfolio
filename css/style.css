@@ -375,7 +375,7 @@ body {
 
 #about .about-bottom {
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     background-color: #003535;
     background-color: var(--darkblue-bg_color);
     opacity: 0.8;   
@@ -389,6 +389,7 @@ body {
     padding: 70px 24px;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: nowrap;
     gap: 100px;
 }
 #about .about-bottom .about-list-wrap .about-list {}
@@ -404,6 +405,13 @@ body {
     gap: 5px;
     letter-spacing: 1px;
 }
+#about .about-bottom .about-list .about-list-txt li {
+    
+}
+#about .about-bottom .about-list .about-list-txt li span {
+    display: inline-block;
+    width: 190px;
+}
 #about .about-bottom .about-list .sns {
     margin-top: 10px;
     display: flex;
@@ -416,11 +424,119 @@ body {
     object-fit: cover;
 }
 
+@media screen and (max-width: 1580px) {
+    #about .contents-area .top-area .profile-desc{
+        font-size: 50px;
+    }
+    #about .contents-area .top-area .profile-desc strong{
+        font-size: 58px;
+    }
+    #about .contents-area .top-area .profile-img{
+        width: 380px;
+        height: 380px;
+    }
+    #about .about-bottom .about-list .about-list-tit {
+        font-size: 21px;
+    }
+    #about .about-bottom .about-list .about-list-txt {
+        font-size: 16px;
+    }
+    #about .about-bottom .about-list .sns li a img {
+        height: 36px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #about .contents-area {
+        padding: 30px 10px;
+    }
+    #about .contents-area .top-area .profile-desc{
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+    #about .contents-area .top-area .profile-desc strong{
+        font-size: 48px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 380px;
+        height: 380px;
+        overflow: hidden;
+        margin: 20px 0 0;
+        z-index: 5;
+    }
+    
+    #about .about-bottom .about-list-wrap {
+        width: 100%;
+        padding: 70px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    #about .about-bottom .about-list .about-list-txt li span {
+        display: inline-block;
+        width: 180px;
+    }
+}
+@media screen and (max-width: 1160px) {
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 70px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 20px 0 0;
+        z-index: 5;
+    }
+}
+@media screen and (max-width: 1060px) {
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 180px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 190px;
+        right: 0px;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 0;
+        z-index: 5;
+    }
+}
+@media screen and (max-width: 940px) {
+    #about .about-bottom .about-list-wrap {
+        width: 100%;
+        padding: 70px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #about .contents-area .top-area .profile-desc{
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+    #about .about-bottom .about-list .about-list-txt li span {
+        display: block;
+        margin-bottom: 6px;
+    }
+}
+
+
+
 
 
 /* 웹퍼블리싱 영역 */
+
 #work {
-    /* display: none; */
+    display: none;
 }
 #work .container {}
 #work .contents-area {
@@ -570,8 +686,9 @@ body {
 
 
 /* 디자인작업 영역 */
-
-#design {}
+#design {
+    display: none;
+}
 #design .container {}
 #design .contents-area {}
 #design .contents-area ul {
@@ -628,8 +745,6 @@ body {
     width: 190px;
     background-color: #086161;
     background-color: #3b4772;
-    /* background-color: #00000041; */
-    /* background-color: #4f70703b; */
     color: #fff;
     /* color: #086161; */
 }
@@ -678,11 +793,6 @@ body {
     height: 400px;
 }
 #design .contents-area ul li .content .img-wrap img {
-    /* position: absolute;
-    padding-top: 40%;
-    object-fit: cover;
-    top: 0;
-    left: 0; */
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -710,6 +820,7 @@ body {
     height: 580px;
     background-color: var(--black-color);
     padding: 0;
+    display: none;
 }
 .footer .container {
     padding: 24px;
