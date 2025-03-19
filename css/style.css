@@ -523,10 +523,10 @@ body {
         margin-bottom: 6px;
     }
     #about .about-bottom .about-list .about-list-tit {
-        font-size: 18px;
+        /* font-size: 18px; */
     }
     #about .about-bottom .about-list .about-list-txt {
-        font-size: 15px;
+        /* font-size: 15px; */
     }
     #about .about-bottom .about-list .about-list-txt li P {
         display: inline-block;
