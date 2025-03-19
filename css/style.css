@@ -413,6 +413,7 @@ body {
 #about .about-bottom .about-list .about-list-txt li span {
     display: inline-block;
     width: 190px;
+    white-space: nowrap;
 }
 #about .about-bottom .about-list .about-list-txt li P {
     display: inline-block;
@@ -593,7 +594,7 @@ body {
         font-size: 18px;
     }
     #about .about-bottom .about-list .about-list-txt {
-        font-size: 12px;
+        font-size: 14px;
     }
     #about .about-bottom .about-list .sns li a img {
         height: 32px;
@@ -618,6 +619,9 @@ body {
         right: 0px;
         width: 250px;
         height: 250px;
+    }
+    #about .about-bottom .about-list .about-list-txt {
+        font-size: 12px;
     }
 }
 
