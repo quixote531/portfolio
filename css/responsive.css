@@ -6,6 +6,9 @@
         font-size: 80px;
         line-height: 68px;
     }
+    .title-area p {
+        padding-top: 20px;
+    }
 }
 @media screen and (max-width: 700px) {
     .title-area {
