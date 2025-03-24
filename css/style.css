@@ -223,7 +223,7 @@ body {
 .cursor .img-box.on {
     height: 350px;
     /* opacity: 0.8; */
-    transform: translate(-50% -50%), scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 .cursor .img-box .image {
     width: 100%;
@@ -403,7 +403,23 @@ body {
 #about .about-bottom .about-list .about-list-tit {
     font-size: 24px;
     margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
 }
+#about .about-bottom .about-list:first-child .about-list-tit {
+    padding-left: 0px;
+}
+#about .about-bottom .about-list:not(:first-of-type) .about-list-tit::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
 #about .about-bottom .about-list .about-list-txt {
     display: flex;
     flex-direction: column;
@@ -412,7 +428,9 @@ body {
     gap: 5px;
     letter-spacing: 1px;
 }
-#about .about-bottom .about-list .about-list-txt li {}
+#about .about-bottom .about-list:not(:first-of-type) .about-list-txt li {
+    padding-left: 20px;
+}
 #about .about-bottom .about-list .about-list-txt li span {
     display: inline-block;
     width: 190px;
@@ -499,7 +517,7 @@ body {
 }
 @media screen and (max-width: 1060px) {
     #about .contents-area .top-area .profile-desc{
-        margin-bottom: 180px;
+        margin-bottom: 100px;
     }
     #about .contents-area .top-area .profile-img{
         position: absolute;
@@ -510,13 +528,48 @@ body {
     }
 }
 @media screen and (max-width: 940px) {
+    #about .contents-area .top-area .profile-desc{
+        margin-bottom: 60px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 237px;
+        right: -45px;
+        width: 280px;
+        height: 280px;
+    }
     #about .about-bottom .about-list-wrap {
         width: 100%;
         padding: 70px 24px;
         display: flex;
         flex-direction: column;
-        gap: 60px;
+        gap: 40px;
     }
+    #about .about-bottom .about-list-wrap .about-list {
+        position: relative;
+        padding: 0px 5px;
+    }
+    #about .about-bottom .about-list-wrap .about-list.profile {
+        padding: 0px 10px;
+    }
+    #about .about-bottom .about-list-wrap .about-list::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        background-color: #ffffff33;
+    }
+    #about .about-bottom .about-list .about-list-txt.skills {
+        display: block;
+        gap: 5px;
+        width: 400px;
+        column-count: 2;
+        column-gap: 40px;
+        padding: 0;
+    }
+
 }
 @media screen and (max-width: 700px) {
     #about .title-area p {
@@ -525,10 +578,18 @@ body {
     #about .contents-area .top-area .profile-desc{
         font-size: 32px;
         letter-spacing: -1px;
+        margin-bottom: 50px;
+    }
+    #about .contents-area .top-area .profile-img{
+        position: absolute;
+        top: 227px;
+        right: -45px;
+        width: 250px;
+        height: 250px;
+        margin: 0;
     }
     #about .about-bottom .about-list .about-list-txt li span {
         display: block;
-        margin-bottom: 6px;
     }
     #about .about-bottom .about-list .about-list-tit {
         /* font-size: 18px; */
@@ -546,40 +607,34 @@ body {
 }
 @media screen and (max-width: 650px) {
     #about .about-bottom .about-list-wrap {
-        padding: 90px 12px 70px;
+        padding: 60px 12px;
         gap: 50px;
     }
-    #about .contents-area .top-area .profile-desc{
-        margin-bottom: 250px;
-    }
     #about .contents-area .top-area .profile-img{
-        position: absolute;
-        top: 150px;
-        right: 0px;
-        width: 330px;
-        height: 330px;
+        top: 227px;
+        right: -45px;
+        width: 240px;
+        height: 240px;
     }
 }
 @media screen and (max-width: 560px) {
     #about .contents-area .top-area .profile-desc{
-        margin-bottom: 260px;
-        font-size: 28px;
-        letter-spacing: -1px;
+        margin-bottom: 30px;
+        font-size: 27px;
     }
     #about .contents-area .top-area .profile-desc strong{
         font-size: 31px;
     }
     #about .contents-area .top-area .profile-img{
-        position: absolute;
-        top: 130px;
-        right: 0px;
-        width: 330px;
-        height: 330px;
+        top: 171px;
+        right: -45px;
     }
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
+    #about .contents-area {
+        padding: 15px 10px;
+    }
     #about .contents-area .top-area .profile-desc{
-        margin-bottom: 220px;
         font-size: 21px;
         letter-spacing: -1px;
     }
@@ -587,45 +642,68 @@ body {
         font-size: 26px;
     }
     #about .contents-area .top-area .profile-img{
-        position: absolute;
-        top: 90px;
-        right: 0px;
-        width: 300px;
-        height: 300px;
+        top: 135px;
+        right: -34px;
+        width: 220px;
+        height: 220px;
+    }
+    #about .about-bottom .about-list-wrap {
+        padding: 50px 12px;
+        gap: 50px;
+    }
+    #about .about-bottom .about-list-wrap .about-list:nth-child(2) {
+        display: flex;
     }
     #about .about-bottom .about-list .about-list-tit {
         font-size: 18px;
     }
+    #about .about-bottom .about-list-wrap .about-list:nth-child(2) .about-list-tit{
+        margin: 0 10px 30px 0;
+    }
     #about .about-bottom .about-list .about-list-txt {
         font-size: 14px;
+    }
+    #about .about-bottom .about-list .about-list-txt.skills {
+        gap: 5px;
+        width: 300px;
     }
     #about .about-bottom .about-list .sns li a img {
         height: 32px;
     }
 }
-@media screen and (max-width: 390px) {
+
+
+@media screen and (max-width: 425px) {
     #about .about-bottom .about-list-wrap {
-        padding: 90px 12px 70px;
-        gap: 26px;
+        padding: 34px 0px 40px;
+        gap: 45px;
     }
     #about .contents-area .top-area .profile-desc{
-        margin-bottom: 180px;
+        margin-bottom: 20px;
         font-size: 18px;
-        letter-spacing: -1px;
+        /* letter-spacing: -1px; */
     }
     #about .contents-area .top-area .profile-desc strong{
         font-size: 22px;
     }
     #about .contents-area .top-area .profile-img{
-        position: absolute;
-        top: 70px;
-        right: 0px;
-        width: 250px;
-        height: 250px;
+        top: 112px;
+        right: -34px;
+        width: 190px;
+        height: 190px;
     }
     #about .about-bottom .about-list .about-list-txt {
         font-size: 12px;
+        gap: 3px;
     }
+    #about .about-bottom .about-list .about-list-txt.skills {
+        gap: 3px;
+        width: 300px;
+    }
+    #about .about-bottom .about-list .about-list-txt li P {
+        margin-bottom: 8px;
+    }
+   
 }
 
 

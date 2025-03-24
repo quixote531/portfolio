@@ -1,22 +1,11 @@
 @charset "utf-8";
 @font-face {
     font-family: "DM Sans";
-    src: url(../font/DMSans-VariableFont_opsz,wght.ttf) format('truetype');
+    src: 
+    /* url(../font/DMSans-VariableFont_opsz_wght.woff2) format('woff2'), */
+    /* url(../font/DMSans-VariableFont_opsz_wght.woff) format('woff'), */
+    url(../font/DMSans-VariableFont_opsz_wght.ttf) format('truetype');
     font-optical-sizing: auto;
     font-weight: 100 900;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Paperlogy';
-    src:
-        url('../font/Paperlogy-7Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Paperlogy';
-    src:
-        url('../font/Paperlogy-6SemiBold.ttf') format('truetype');
-    font-weight: 600;
     font-style: normal;
 }
