@@ -404,6 +404,7 @@ body {
     font-size: 24px;
     margin-bottom: 20px;
     padding-left: 20px;
+    padding-right: 10px;
     position: relative;
 }
 #about .about-bottom .about-list:first-child .about-list-tit {
@@ -430,6 +431,9 @@ body {
 }
 #about .about-bottom .about-list:not(:first-of-type) .about-list-txt li {
     padding-left: 20px;
+}
+#about .about-bottom .about-list:nth-child(2) .about-list-txt li {
+    padding: 2px 10px;
 }
 #about .about-bottom .about-list .about-list-txt li span {
     display: inline-block;
@@ -658,7 +662,7 @@ body {
         font-size: 18px;
     }
     #about .about-bottom .about-list-wrap .about-list:nth-child(2) .about-list-tit{
-        margin: 0 10px 30px 0;
+        margin: 0 10px 54px 0;
     }
     #about .about-bottom .about-list .about-list-txt {
         font-size: 14px;
@@ -697,8 +701,8 @@ body {
         gap: 3px;
     }
     #about .about-bottom .about-list .about-list-txt.skills {
-        gap: 3px;
-        width: 300px;
+        gap: 0px;
+        width: 270px;
     }
     #about .about-bottom .about-list .about-list-txt li P {
         margin-bottom: 8px;
@@ -837,7 +841,7 @@ body {
     margin-top: 18px;
 }
 #work .right-part .scroll-area .web-work .web-desc .desc-bottom ul li {
-    /* padding-bottom: 10px; */
+   
 }
 #work .right-part .scroll-area .web-work .web-desc .desc-bottom ul li a  {
     display: flex;
