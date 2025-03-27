@@ -1087,10 +1087,7 @@ body {
 #design .contents-area ul li .content > p {
     padding-top: 10px;
     font-size: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: none;
+    /* display: none; */
 }
 #design .contents-area ul li .content > .img-wrap {
     margin: 20px 0;
@@ -1165,6 +1162,9 @@ body {
     #design .contents-area ul li .content {
         margin: 40px;
     }
+    #design .contents-area ul li .content > p {
+       display: none;
+    }
 }
 @media screen and (max-width: 1280px) {
     #design .contents-area ul {
@@ -1191,8 +1191,6 @@ body {
     #design .contents-area ul li .content > p {
         padding-top: 10px;
         font-size: 16px;
-        /* white-space: wrap; */
-        /* overflow: hidden; */
     }
 }
 @media screen and (max-width: 990px) {
