@@ -205,6 +205,18 @@ $(document).ready(function(){
         'genie': {
           img: 'images/genie-process.png',
         },
+        'banner1': {
+          img: 'images/준비중.png',
+        },
+        'banner2': {
+          img: 'images/준비중.png',
+        },
+        'logo': {
+          img: 'images/준비중.png',
+        },
+        'd_page': {
+          img: 'images/준비중.png',
+        },
     };
 
 
