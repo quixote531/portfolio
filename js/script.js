@@ -132,11 +132,11 @@ $(document).ready(function(){
         })
     }))
 })
-
+let lenis
 // ===== 부드러운 스크롤 효과 적용 (Lenis.js) =====
 document.addEventListener('DOMContentLoaded', function () {
     // Lenis.js 초기화
-    const lenis = new Lenis ({
+     lenis=new Lenis ({
         duration: 1.3, //감속 지속 시간
         easing: (t) => 1 - Math.pow(1 - t,3), //부드러운 감속
         smoothWheel: true, //마우스휠에 부드러운 스크롤 적용
@@ -195,3 +195,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+// ====== 모달창======
+$(document).ready(function(){
+    const modalContents = {
+        'findoc': {
+          img: 'images/findoc_process.jpg',
+        },
+        'genie': {
+          img: 'images/genie-process.png',
+        },
+    };
+
+
+    // 모달창 띄우기
+    $('.more-btn').click(function(e){
+        e.preventDefault();
+        const id = $(this).data('id'); // 버튼에서 data-id 가져오기
+        const content = modalContents[id];
+
+        if (content) {
+            $('.modal img').attr('src', content.img); // 이미지 변경
+        } else {
+            console.warn(`"${id}"에 해당하는 콘텐츠가 없습니다.`);
+        }
+
+        lenis.stop()
+        $('.modal').fadeIn();
+        $('.modal-close-btn').fadeIn();
+        $('.mask').fadeIn();
+        // $('html, body').css("overflow","hidden");
+    });
+    // 모달창 스크롤 이벤트 부모로 전파 막기
+    $('.modal').on('wheel touchmove',function(e){
+      e.stopPropagation();
+    })
+    // 모달창 닫기
+    $('.modal-close-btn, .mask').click(function(e){
+        e.preventDefault();
+        lenis.start()
+        $('.modal').stop().scrollTop(0); //스크롤 처음으로
+        $('.modal').fadeOut();
+        $('.modal-close-btn').fadeOut();
+        $('.mask').fadeOut();
+        // $('html, body').css("overflow", "visible");
+    });
+});
+
