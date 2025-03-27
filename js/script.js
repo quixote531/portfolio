@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function(){
     const modalContents = {
         'findoc': {
-          img: 'images/findoc_process.jpg',
+          img: 'images/findoc_process_wrap.jpg',
         },
         'genie': {
           img: 'images/genie-process.png',
@@ -218,7 +218,6 @@ $(document).ready(function(){
           img: 'images/준비중.png',
         },
     };
-
 
     // 모달창 띄우기
     $('.more-btn').click(function(e){
