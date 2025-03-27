@@ -1,4 +1,7 @@
 @media screen and (max-width:1080px) {
+    .section {
+        padding: 60px 0 20px;
+    }
     .container {
         padding: 0 36px;
     }
@@ -20,6 +23,9 @@
     }
 }
 @media screen and (max-width: 500px) {
+    .section {
+        padding: 40px 0 20px;
+    }
     .container {
         padding: 0 24px;
     }

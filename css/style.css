@@ -907,6 +907,9 @@ body {
     }
 }
 @media screen and (max-width: 780px) {
+    #work .contents-area {
+        padding: 26px 0px;
+    }
     #work .contents-area .left-part {
         display: none;
     }
@@ -1011,7 +1014,7 @@ body {
     position: relative;
     height: 100%;
     width: 190px;
-    /* transition: width 0.5s ease; */
+    transition: width 0.5s ease;
     display: flex;
     overflow: hidden;
 }
@@ -1027,6 +1030,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     border-left: 1px solid var(--border-black-color);
+    border-right: 1px solid var(--border-black-color);
     cursor: pointer;
 }
 #design .contents-area ul li:hover .subject{
@@ -1043,8 +1047,8 @@ body {
 #design .contents-area ul li .subject h3 {
     font-size: 50px;
     font-weight: 500;
-    transform: rotate(-90deg) translateY(100%);
-    transform-origin: bottom left;
+    writing-mode: sideways-lr;
+    text-orientation: reverse;
     white-space: nowrap;
     display: block;
 }
@@ -1083,11 +1087,13 @@ body {
 #design .contents-area ul li .content > p {
     padding-top: 10px;
     font-size: 18px;
-    white-space: wrap;
-    /* overflow: hidden; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
 }
 #design .contents-area ul li .content > .img-wrap {
-    margin: 10px 0 20px;
+    margin: 20px 0;
     width: 100%;
     aspect-ratio: 1.8;
     background: #fff;
@@ -1147,7 +1153,7 @@ body {
     #design .contents-area ul li .subject {
         padding: 20px;
         display: flex;
-        flex: 0 0 130px;
+        flex: 0 0 153px;
     }
     #design .contents-area ul li.active .subject{
         width: 130px;
@@ -1167,7 +1173,7 @@ body {
     #design .contents-area ul li .subject {
         padding: 20px;
         display: flex;
-        flex: 0 0 110px;
+        flex: 0 0 121px;
     }
     #design .contents-area ul li.active .subject{
         width: 110px;
@@ -1185,7 +1191,7 @@ body {
     #design .contents-area ul li .content > p {
         padding-top: 10px;
         font-size: 16px;
-        white-space: wrap;
+        /* white-space: wrap; */
         /* overflow: hidden; */
     }
 }
@@ -1207,7 +1213,7 @@ body {
         border-left: none;
         max-height: 88px;
         overflow: hidden;
-        /* transition: max-height 0.5s ease-in; */
+        transition: max-height 0.5s ease-in;
     }
     #design .contents-area ul li.active {
         width: 100%;
@@ -1222,6 +1228,7 @@ body {
         flex-direction: row-reverse;
         justify-content: space-between;
         border-left: none;
+        border-right: none;
         border-bottom: 1px solid var(--border-black-color);
     }
     #design .contents-area ul li:hover .subject{
@@ -1238,8 +1245,8 @@ body {
     #design .contents-area ul li .subject .num,
     #design .contents-area ul li .subject h3 {
         font-size: 36px;
-        transform: rotate(0deg) translateY(0%);
-        transform-origin: bottom left;
+        writing-mode: inherit;
+        text-orientation: inherit;
         white-space: nowrap;
         display: block;
     }

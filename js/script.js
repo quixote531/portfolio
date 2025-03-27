@@ -1,99 +1,38 @@
-// ====== 웹퍼블리싱 섹션 ======
+// 인트로 문자 GSAP 애니메이션
+window.addEventListener('DOMContentLoaded', () => {
+    const introWords = document.querySelectorAll('.intro-word h2');
+    const introParagraph = document.querySelectorAll('.intro-word p');
 
-// 웹퍼블리싱 섹션 - GSAP ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
-// 비디오 autoplay 속성을 동적으로 추가/제거
-function handleVideoAutoplay(video, triggerElement) {
-    ScrollTrigger.create({
-      trigger: triggerElement,
-      start: "top 30%",
-      end: "bottom 30%",
-    //   markers: true,
-      toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        video.setAttribute("autoplay", "true"); // autoplay 속성 추가
-        video.muted = true; // 자동 재생을 위해 mute 설정
-        video.play(); // 비디오 재생
-        // video.currentTime = 0; // 처음부터 재생
-      },
-      onLeave: () => {
-        video.removeAttribute("autoplay"); // autoplay 속성 제거
-        video.pause(); // 비디오 정지
-        video.currentTime = 0; //비디오 처음으로 되돌리기
-      },
-      onEnterBack: () => {
-        video.setAttribute("autoplay", "true");
-        video.muted = true;
-        video.play();
-      },
-      onLeaveBack: () => {
-        video.removeAttribute("autoplay");
-        video.pause();
-      }
-    });
-  }
-  
-  // 모든 .web-work 요소에 대해 비디오 컨트롤 적용
-  document.querySelectorAll(".web-work").forEach((work) => {
-    const video = work.querySelector("video");
-    if (video) {
-      handleVideoAutoplay(video, work);
-    }
-  });
-
-ScrollTrigger.create({
-    trigger: "#work .contents-area",
-    start: "top top",
-    end: "bottom bottom",
-    pin: "#work .order-num",
-    anticipatePin: 1,
-    // markers: true,
+    gsap.fromTo(introWords,
+        { opacity: 0, y: 200 },
+        { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }
+    );
+    gsap.fromTo(introParagraph,
+        { opacity: 0, y: 30 },  
+        { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }
+    );
 });
 
-// 각각의 .web-work 스크롤 진입 시 .num-count의 숫자 변경
-const webWorks = document.querySelectorAll("#work .scroll-area .web-work");
+// 푸터 문자 GSAP 애니메이션
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger); // ScrollTrigger 등록
 
-webWorks.forEach((work, index) => {
-  ScrollTrigger.create({
-    trigger: work,
-    start: "top 20%", // 웹 작업물의 상단이 화면의 상단 20% 지점에 도달하면 애니메이션 시작
-    end: "bottom center", // 웹 작업물의 하단이 화면의 중앙을 통과하면 애니메이션 종료
-    toggleActions: "play reverse play reverse", // 스크롤 방향에 따라 애니메이션 재생 및 역재생 반복
-    // markers: true,
-    onEnter: () => updateNum(index), //요소 화면 진입시 인덱스 업데이트
-    onEnterBack: () => updateNum(index) //요소 화면 진입시 인덱스 업데이트
-  });
+    const footerWords = document.querySelectorAll('.footer p');
+
+    gsap.fromTo(footerWords,
+        { opacity: 0 },
+        {
+            opacity: 1,
+            duration: 2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.footer',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
 });
-
-
-
-// 숫자 변경 함수 정의(index에 따라 숫자를 y축으로 이동)
-function updateNum(index) {
-  gsap.to("#work .order-num .num-count", {
-    yPercent: -100 * index, // 숫자의 높이만큼 이동하여 다음 숫자로 전환
-    ease: "power2.out", // 부드러운 전환 효과
-    duration: 0.5 // 애니메이션 지속 시간 (0.5초)
-  });
-}
-
-
-
-// ====== 디자인 섹션 ======
-// 아코디언 메뉴 클릭시 펼치기 기능 설정
-$(document).ready(function(){
-    const designList = $('#design li')
-
-    // 최초 실행 시 첫 번째 li만 active하고
-    designList.first().addClass('active');
-
-    designList.click(function(e){
-        designList.removeClass('active');
-        $(this).addClass('active');
-    });
-
-})
-
 
 // ====== NAV 클릭시 해당 섹션 스크롤 이동  ======
 $(document).ready(function(){
@@ -195,6 +134,116 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+// ====== 웹퍼블리싱 섹션 ======
+
+// 웹퍼블리싱 섹션 - GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// 비디오 autoplay 속성을 동적으로 추가/제거
+function handleVideoAutoplay(video, triggerElement) {
+    ScrollTrigger.create({
+      trigger: triggerElement,
+      start: "top 30%",
+      end: "bottom 30%",
+    //   markers: true,
+      toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        video.setAttribute("autoplay", "true"); // autoplay 속성 추가
+        video.muted = true; // 자동 재생을 위해 mute 설정
+        video.play(); // 비디오 재생
+        // video.currentTime = 0; // 처음부터 재생
+      },
+      onLeave: () => {
+        video.removeAttribute("autoplay"); // autoplay 속성 제거
+        video.pause(); // 비디오 정지
+        video.currentTime = 0; //비디오 처음으로 되돌리기
+      },
+      onEnterBack: () => {
+        video.setAttribute("autoplay", "true");
+        video.muted = true;
+        video.play();
+      },
+      onLeaveBack: () => {
+        video.removeAttribute("autoplay");
+        video.pause();
+      }
+    });
+  }
+  
+  // 모든 .web-work 요소에 대해 비디오 컨트롤 적용
+  document.querySelectorAll(".web-work").forEach((work) => {
+    const video = work.querySelector("video");
+    if (video) {
+      handleVideoAutoplay(video, work);
+    }
+  });
+
+ScrollTrigger.create({
+    trigger: "#work .contents-area",
+    start: "top top",
+    end: "bottom bottom",
+    pin: "#work .order-num",
+    anticipatePin: 1,
+    // markers: true,
+});
+
+// 각각의 .web-work 스크롤 진입 시 .num-count의 숫자 변경
+const webWorks = document.querySelectorAll("#work .scroll-area .web-work");
+
+webWorks.forEach((work, index) => {
+  ScrollTrigger.create({
+    trigger: work,
+    start: "top 20%", // 웹 작업물의 상단이 화면의 상단 20% 지점에 도달하면 애니메이션 시작
+    end: "bottom center", // 웹 작업물의 하단이 화면의 중앙을 통과하면 애니메이션 종료
+    toggleActions: "play reverse play reverse", // 스크롤 방향에 따라 애니메이션 재생 및 역재생 반복
+    // markers: true,
+    onEnter: () => updateNum(index), //요소 화면 진입시 인덱스 업데이트
+    onEnterBack: () => updateNum(index) //요소 화면 진입시 인덱스 업데이트
+  });
+});
+
+
+
+// 숫자 변경 함수 정의(index에 따라 숫자를 y축으로 이동)
+function updateNum(index) {
+  gsap.to("#work .order-num .num-count", {
+    yPercent: -100 * index, // 숫자의 높이만큼 이동하여 다음 숫자로 전환
+    ease: "power2.out", // 부드러운 전환 효과
+    duration: 0.5 // 애니메이션 지속 시간 (0.5초)
+  });
+}
+
+
+
+// ====== 디자인 섹션 ======
+// 아코디언 메뉴 클릭시 펼치기 기능 설정
+$(document).ready(function(){
+    const designList = $('#design li')
+
+    // 최초 실행 시 첫 번째 li만 active하고
+    designList.first().addClass('active');
+
+    designList.click(function(e){
+        // e.preventDefault();
+
+        if (window.innerWidth <= 990) {
+            // 990px 이하일 때 슬라이드 방식
+            if (!$(this).hasClass('active')) {
+                designList.removeClass('active').find('.content').slideUp();
+                $(this).addClass('active').find('.content').slideDown();
+            } else {
+                $(this).removeClass('active').find('.content').slideUp();
+            }
+        } else {
+            // 990px 초과일 때는 슬라이드 없이 active만 처리
+            designList.removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+
+})
+
 
 // ====== 모달창======
 $(document).ready(function(){
