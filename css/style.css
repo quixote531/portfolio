@@ -1048,7 +1048,9 @@ body {
 #design .contents-area ul li .subject h3 {
     font-size: 50px;
     font-weight: 500;
+    -webkit-writing-mode: sideways-lr;
     writing-mode: sideways-lr;
+    -webkit-text-orientation: reverse;
     text-orientation: reverse;
     white-space: nowrap;
     display: block;
