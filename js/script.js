@@ -225,7 +225,7 @@ $(document).ready(function(){
     designList.first().addClass('active');
 
     designList.click(function(e){
-        // e.preventDefault();
+        e.preventDefault();
 
         if (window.innerWidth <= 990) {
             // 990px 이하일 때 슬라이드 방식

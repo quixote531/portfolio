@@ -552,6 +552,7 @@ body {
     #about .about-bottom .about-list-wrap .about-list {
         position: relative;
         padding: 0px 5px;
+        width: 100%;
     }
     #about .about-bottom .about-list-wrap .about-list.profile {
         padding: 0px 10px;
@@ -1007,7 +1008,7 @@ body {
 #design .contents-area ul {
     display: flex;
     justify-content: space-between;
-    height: 620px;
+    height: 640px;
     border-right: 1px solid var(--border-black-color);
 }
 #design .contents-area ul li {
@@ -1058,12 +1059,10 @@ body {
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
-    visibility: hidden;
-    transition: visibility 0.3s ease;
 }
 #design .contents-area ul li.active .content {
     flex: 1;
-    visibility: visible;
+    display: block !important;
 }
 #design .contents-area ul li .content h4 {
     font-size: 32px;
@@ -1081,13 +1080,11 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-#design .contents-area ul li:hover .content h4 span {
-    /* color: #fff; */
-}
+#design .contents-area ul li:hover .content h4 span {}
 #design .contents-area ul li .content > p {
     padding-top: 10px;
     font-size: 18px;
-    /* display: none; */
+    white-space: nowrap;
 }
 #design .contents-area ul li .content > .img-wrap {
     margin: 20px 0;
@@ -1493,5 +1490,16 @@ body {
     }
     .footer .footer-box .footer-bottom .copyright p {
         font-size: 12px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .footer .container {
+        padding: 0 18px;
+    }
+    .footer .footer-box .footer-bottom p {
+        font-size: 14px;
+    }
+    .footer .footer-box .footer-bottom .info p{
+        margin-right: 0px;
     }
 }
