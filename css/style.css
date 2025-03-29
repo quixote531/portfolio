@@ -255,6 +255,10 @@ body {
         font-weight: 600;
         letter-spacing: -5px;
     }
+    /* 커서 이미지 */
+    .cursor {
+        display: none;
+    }
 }
 @media screen and (max-width: 1080px) {
     #intro .intro-box .intro-row .intro-word h2 {
@@ -304,10 +308,7 @@ body {
         #intro .intro-box .intro-row .intro-word h2 .web {
             display: none;
         }
-        /* 커서 이미지 */
-        .cursor {
-            display: none;
-        }
+        
     }
     @media screen and (max-width: 450px) {
         #intro .intro-box {
@@ -1317,7 +1318,7 @@ body {
     left: 50%;
     z-index: 999;
     width: 70%;
-    height: 90vh;
+    height: 100vh;
     transform: translateX(-50%);
     /* overflow-y: scroll; */
     overflow-y: auto;
@@ -1332,7 +1333,7 @@ body {
 }
 .modal-close-btn.fa-solid {
     position: fixed;
-    top: 105px;
+    top: 20px;
     right: 16.5%;
     z-index: 1000;
     cursor: pointer;
@@ -1345,13 +1346,13 @@ body {
         bottom: 0%;
         left: 50%;
         width: 80%;
-        height: 90vh;
+        height: 100vh;
         transform: translateX(-50%);
     }
     .modal-close-btn.fa-solid {
         position: fixed;
-        top: 105px;
-        right: 12%;
+        top: 20px;
+        right: 13%;
         z-index: 1000;
         cursor: pointer;
         font-size: 30px;
@@ -1368,7 +1369,7 @@ body {
     } 
     .modal-close-btn.fa-solid {
         position: fixed;
-        top: 3%;
+        top: 20px;
         right: 3%;
         z-index: 1000;
         cursor: pointer;

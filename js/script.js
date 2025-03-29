@@ -48,7 +48,7 @@ $(document).ready(function(){
 
         // 클릭된 메뉴(li)의 indexNumber와 동일순서의 section을 가져오기
         let $section = contents.eq(idx)
-        let sectionPos = $section.offset().top
+        let sectionPos = $section.offset().top + 2;
 
         // 해당섹션 위치로 이동
         $("html, body").animate({
