@@ -233,7 +233,6 @@ function updateNum(index) {
 }
 
 
-
 // ====== 디자인 섹션 ======
 // 아코디언 메뉴 클릭시 펼치기 기능 설정
 $(document).ready(function(){

@@ -270,12 +270,6 @@ body {
     }
 }
 @media screen and (max-width: 780px) {
-    #intro {
-        width: 100%;
-        height: 80vh;
-        background-color: var(--black-color);
-        padding: 0;
-    }
     #intro .intro-box {
         width: 100%;
         height: 65%;
