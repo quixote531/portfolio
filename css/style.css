@@ -257,12 +257,6 @@ body {
     }
 }
 @media screen and (max-width: 1080px) {
-    #intro {
-        width: 100%;
-        height: 80vh;
-        background-color: var(--black-color);
-        padding: 0;
-    }
     #intro .intro-box .intro-row .intro-word h2 {
         font-size: 100px;
         line-height: 80px;
