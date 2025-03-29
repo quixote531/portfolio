@@ -203,11 +203,10 @@ function removeAutoplayForSmallScreens() {
             }
         });
     }
-   
 }
   
-  window.addEventListener("DOMContentLoaded", removeAutoplayForSmallScreens);
-  window.addEventListener("resize", removeAutoplayForSmallScreens);
+window.addEventListener("DOMContentLoaded", removeAutoplayForSmallScreens);
+window.addEventListener("resize", removeAutoplayForSmallScreens);
 
 // 각각의 .web-work 스크롤 진입 시 .num-count의 숫자 변경
 const webWorks = document.querySelectorAll("#work .scroll-area .web-work");
