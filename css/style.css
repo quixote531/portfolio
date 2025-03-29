@@ -1041,12 +1041,19 @@ body {
 #design .contents-area ul li .subject h3 {
     font-size: 50px;
     font-weight: 500;
-    -webkit-writing-mode: sideways-lr;
-    writing-mode: sideways-lr;
-    -webkit-text-orientation: reverse;
-    text-orientation: reverse;
+    /* -webkit-writing-mode: sideways-lr;  ios 호환성문제로 transform 사용 */ 
+    /* writing-mode: sideways-lr; */
+    /* -webkit-text-orientation: reverse; */
+    /* text-orientation: reverse; */
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: relative;
+    top: 58px;
+    width: 120px;
     white-space: nowrap;
     display: block;
+  
 }
 
 #design .contents-area ul li .content {
@@ -1235,10 +1242,14 @@ body {
     #design .contents-area ul li .subject .num,
     #design .contents-area ul li .subject h3 {
         font-size: 36px;
-        writing-mode: inherit;
-        text-orientation: inherit;
-        white-space: nowrap;
-        display: block;
+        /* writing-mode: inherit; */
+        /* text-orientation: inherit; */
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        transform-origin: left top;
+        position: relative;
+        top: 0px;
+        width: 45px;
     }
     #design .contents-area ul li .content {
         display: flex;
