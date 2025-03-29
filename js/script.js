@@ -190,30 +190,21 @@ ScrollTrigger.create({
     // markers: true,
 });
 
-function setupVideoForSmallScreens() {
-    const videos = document.querySelectorAll("video");
-    
+function removeAutoplayForSmallScreens() {
     if (window.innerWidth < 480) {
-      videos.forEach((video) => {
-        // autoplay 제거 및 정지
-        video.removeAttribute("autoplay");
-        video.pause();
-  
-        // 클릭 이벤트가 이미 등록되어 있다면 중복되지 않도록 기존 이벤트 제거 후 재등록
-        video.onclick = function () {
-          // 영상이 정지 상태라면 재생
-          if (video.paused) {
+        document.querySelectorAll("video").forEach((video) => {
+            video.removeAttribute("autoplay");
+            video.pause();
+        });
+       // video를 클릭하면 재생하도록 이벤트 추가
+        video.addEventListener("click", function playOnClick() {
+            if (video.paused) {
             video.play();
-          }
-        };
-      });
-    } else {
-      // 480px 이상일 경우, 클릭 이벤트 제거
-      videos.forEach((video) => {
-        video.onclick = null;
-      });
+            }
+        });
     }
-  }
+   
+}
   
   window.addEventListener("DOMContentLoaded", removeAutoplayForSmallScreens);
   window.addEventListener("resize", removeAutoplayForSmallScreens);
@@ -232,8 +223,6 @@ webWorks.forEach((work, index) => {
     onEnterBack: () => updateNum(index) //요소 화면 진입시 인덱스 업데이트
   });
 });
-
-
 
 // 숫자 변경 함수 정의(index에 따라 숫자를 y축으로 이동)
 function updateNum(index) {
