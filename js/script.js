@@ -143,33 +143,35 @@ gsap.registerPlugin(ScrollTrigger);
 // 비디오 autoplay 속성을 동적으로 추가/제거
 function handleVideoAutoplay(video, triggerElement) {
     ScrollTrigger.create({
-      trigger: triggerElement,
-      start: "top 30%",
-      end: "bottom 30%",
-    //   markers: true,
-      toggleActions: "play reverse play reverse",
-      onEnter: () => {
-        video.setAttribute("autoplay", "true"); // autoplay 속성 추가
-        video.muted = true; // 자동 재생을 위해 mute 설정
-        video.play(); // 비디오 재생
-        // video.currentTime = 0; // 처음부터 재생
-      },
-      onLeave: () => {
-        video.removeAttribute("autoplay"); // autoplay 속성 제거
-        video.pause(); // 비디오 정지
-        video.currentTime = 0; //비디오 처음으로 되돌리기
-      },
-      onEnterBack: () => {
-        video.setAttribute("autoplay", "true");
-        video.muted = true;
-        video.play();
-      },
-      onLeaveBack: () => {
-        video.removeAttribute("autoplay");
-        video.pause();
-      }
-    });
-  }
+        trigger: triggerElement,
+        start: "top 30%",
+        end: "bottom 30%",
+        toggleActions: "play reverse play reverse",
+        onEnter: () => {
+          if (window.innerWidth >= 480) {
+            video.setAttribute("autoplay", "true");
+            video.muted = true;
+            video.play();
+          }
+        },
+        onLeave: () => {
+          video.removeAttribute("autoplay");
+          video.pause();
+          video.currentTime = 0;
+        },
+        onEnterBack: () => {
+          if (window.innerWidth >= 480) {
+            video.setAttribute("autoplay", "true");
+            video.muted = true;
+            video.play();
+          }
+        },
+        onLeaveBack: () => {
+          video.removeAttribute("autoplay");
+          video.pause();
+        }
+      });
+}
   
   // 모든 .web-work 요소에 대해 비디오 컨트롤 적용
   document.querySelectorAll(".web-work").forEach((work) => {
@@ -187,6 +189,18 @@ ScrollTrigger.create({
     anticipatePin: 1,
     // markers: true,
 });
+
+function removeAutoplayForSmallScreens() {
+    if (window.innerWidth < 480) {
+      document.querySelectorAll("video").forEach((video) => {
+        video.removeAttribute("autoplay");
+        video.pause();
+      });
+    }
+  }
+  
+  window.addEventListener("DOMContentLoaded", removeAutoplayForSmallScreens);
+  window.addEventListener("resize", removeAutoplayForSmallScreens);
 
 // 각각의 .web-work 스크롤 진입 시 .num-count의 숫자 변경
 const webWorks = document.querySelectorAll("#work .scroll-area .web-work");
@@ -261,7 +275,7 @@ $(document).ready(function(){
           img: 'images/준비중.png',
         },
         'logo': {
-          img: 'images/준비중.png',
+          img: 'images/logo-process.png',
         },
         'd_page': {
           img: 'images/준비중.png',
