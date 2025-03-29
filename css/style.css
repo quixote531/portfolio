@@ -248,16 +248,18 @@ body {
 }
 
 /* 인트로 섹션 반응형 */
+@media screen and (max-width: 1580px) {
+    /* 커서 이미지 */
+    .cursor {
+        display: none;
+    }
+}
 @media screen and (max-width: 1280px) {
     #intro .intro-box .intro-row .intro-word h2 {
         font-size: 160px;
         line-height: 140px;
         font-weight: 600;
         letter-spacing: -5px;
-    }
-    /* 커서 이미지 */
-    .cursor {
-        display: none;
     }
 }
 @media screen and (max-width: 1080px) {
