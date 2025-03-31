@@ -307,7 +307,7 @@ $(document).ready(function(){
           img: 'images/준비중.png',
         },
         'banner2': {
-          img: 'images/준비중.png',
+          img: 'images/trip-banner.png',
         },
         'logo': {
           img: 'images/logo-process.png',
