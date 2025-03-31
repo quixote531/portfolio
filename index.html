@@ -12,6 +12,8 @@
     <meta property="og:description" content="UI/UX디자이너 김주원입니다. 포트폴리오 방문을 환영합니다.">
     <!-- Font -->
     <link rel="stylesheet" href="css/font.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
@@ -24,6 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Lenis.JS -->
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery CDN-->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- jQuery throttle -->
@@ -57,27 +61,30 @@
                         <div class="intro-box">
                             <div class="intro-row" data-img="#img1">
                                 <div class="intro-word">
-                                    <h2>I'm</h2>
+                                    <h2 id="word1">I'm</h2>
                                 </div>
                             </div>
                             <div class="intro-row" data-img="#img2">
                                 <div class="intro-word">
                                     <p>User Interface, User Experience, Web & App Design</p>
-                                    <h2>Juwon</h2>
+                                    <h2 id="word2">Juwon</h2>
                                 </div>
                             </div>
                             <div class="intro-row" data-img="#img3">
                                 <div class="intro-word">
-                                    <h2>Web Publisher</h2>
+                                    <h2 id="word1">Web Publisher</h2>
                                 </div>
                             </div>
                             <div class="intro-row" data-img="#img4">
                                 <div class="intro-word">
                                     <p>Responsive Web, Wireframe, Prototype</p>
-                                    <h2>Designer</h2>
+                                    <h2 id="word2">Designer</h2>
                                 </div>
                             </div>
                         </div>
+                        <a href="javascript:void(0)" class="scroll-down">
+                            <i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>
+                        </a>
                    </div> 
                    <div class="cursor">
                         <div class="img-box">
@@ -354,7 +361,7 @@
                                         <h4>ShakeShack<span>쉐이크쉑</span></h4>
                                         <p>포토샵을 활용하여 광고 배너를 제작하였습니다.</p>
                                         <div class="img-wrap">
-                                            <img src="images/슬라이드배너2(쉐이크쉑).jpg" alt="">
+                                            <img src="images/배너(쉐이크쉑).png" alt="">
                                         </div>
                                         <div class="more-btn" data-id="banner1">
                                             <a href="#">

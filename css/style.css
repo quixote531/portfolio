@@ -171,6 +171,7 @@ body {
     height: 100vh;
     background-color: var(--black-color);
     padding: 0;
+    position: relative;
 }
 #intro.section::before {
     background: none;
@@ -212,6 +213,18 @@ body {
 #intro .intro-box .intro-row .intro-word p {
     font-size: 16px ;
 }
+#intro .scroll-down {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+#intro .scroll-down .fa-chevron-down {
+    font-size: 35px;
+}
+
+
 /* 커서 이미지 박스 */
 .cursor .img-box {
     position: fixed;
@@ -291,40 +304,43 @@ body {
     #intro .intro-box .intro-row .intro-word p {
         display: none;
     }
-    @media screen and (max-width: 580px) {
-        #intro .container {
-            padding: 16px;
-            height: 100%;
-        }
-        #intro .intro-box {
-            width: 100%;
-            height: 400px;
-            display: flex;
-            margin-top: 100px;
-        }
-        #intro .intro-box .intro-row .intro-word h2 {
-            font-size: 60px;
-            line-height: 60px;
-            letter-spacing: -2px;
-        }
-        #intro .intro-box .intro-row .intro-word h2 .web {
-            display: none;
-        }
-        
+    #intro .scroll-down .fa-chevron-down {
+        font-size: 28px;
     }
-    @media screen and (max-width: 450px) {
-        #intro .intro-box {
-            width: 100%;
-            height: 340px;
-            display: flex;
-            margin-top: 100px;
-        }
-        #intro .intro-box .intro-row .intro-word h2 {
-            font-size: 54px;
-        }
-    }
-
 }
+@media screen and (max-width: 580px) {
+    #intro .container {
+        padding: 16px;
+        height: 100%;
+    }
+    #intro .intro-box {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        margin-top: 100px;
+    }
+    #intro .intro-box .intro-row .intro-word h2 {
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: -2px;
+    }
+    #intro .intro-box .intro-row .intro-word h2 .web {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 450px) {
+    #intro .intro-box {
+        width: 100%;
+        height: 340px;
+        display: flex;
+        margin-top: 100px;
+    }
+    #intro .intro-box .intro-row .intro-word h2 {
+        font-size: 54px;
+    }
+}
+
 
 
 /* 어바웃 영역 */

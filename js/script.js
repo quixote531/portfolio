@@ -12,6 +12,38 @@ window.addEventListener('DOMContentLoaded', () => {
         { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }
     );
 });
+// const ani_keywords = gsap.timeline();
+// ani_keywords
+//     .fromTo("#intro #word1",{xPercent: 0},{xPercent: 100},"a")
+//     .fromTo("#intro #word2",{xPercent: 0},{xPercent: -100},"a")
+// ScrollTrigger.create({
+//     animation: ani_keywords,
+//     trigger: "#intro",
+//     start: "top top",
+//     end: "bottom 40%",
+//     scrub: 2,
+//     pin: true,
+//     anticipatePin: 1,
+//     markers: true,
+// })
+
+
+
+// 버튼 클릭시 어바웃섹션으로 이동
+$('.scroll-down').click(function(e){
+    e.preventDefault();
+    $('html,body').animate({
+        scrollTop: $('#about').offset().top
+    },500)
+})
+// 스크롤유도 버튼 애니메이션
+gsap.to(".scroll-down", {
+    y: -10,           
+    duration: 0.8,   
+    repeat: -1,      
+    yoyo: true,      
+    ease: "power1.inOut"
+});
 
 // 푸터 문자 GSAP 애니메이션
 window.addEventListener('DOMContentLoaded', () => {
@@ -266,7 +298,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     const modalContents = {
         'findoc': {
-          img: 'images/findoc_process_wrap.jpg',
+          img: 'images/findoc_process.jpg',
         },
         'genie': {
           img: 'images/genie-process.png',
@@ -319,3 +351,8 @@ $(document).ready(function(){
     });
 });
 
+// AOS 공통적용 사항
+AOS.init({
+    duration: 1000,
+    once: "true"
+  });
