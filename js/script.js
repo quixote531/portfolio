@@ -296,37 +296,28 @@ $(document).ready(function(){
 
 // ====== 모달창======
 $(document).ready(function(){
-    const modalContents = {
-        'findoc': {
-          img: 'images/findoc_process.jpg',
-        },
-        'genie': {
-          img: 'images/genie-process.png',
-        },
-        'banner1': {
-          img: 'images/준비중.png',
-        },
-        'banner2': {
-          img: 'images/trip-banner.png',
-        },
-        'logo': {
-          img: 'images/logo-process.png',
-        },
-        'd_page': {
-          img: 'images/준비중.png',
-        },
-    };
+    const modalImages = [
+        'images/genie-process.png',    
+        'images/findoc_process.jpg',   
+        'images/logo-process.png',   
+        'images/준비중.png',            
+        'images/trip-banner.png',    
+        'images/준비중.png'          
+    ];
+
 
     // 모달창 띄우기
     $('.more-btn').click(function(e){
         e.preventDefault();
-        const id = $(this).data('id'); // 버튼에서 data-id 가져오기
-        const content = modalContents[id];
 
-        if (content) {
-            $('.modal img').attr('src', content.img); // 이미지 변경
+        // 모달 이미지 인덱스 순서로 불러오기
+        const idx = $('.more-btn').index(this);
+        console.log(idx);
+
+        if (modalImages[idx]) {
+            $('.modal img').attr('src', modalImages[idx]);
         } else {
-            console.warn(`"${id}"에 해당하는 콘텐츠가 없습니다.`);
+            console.warn(`index ${idx}에 해당하는 이미지가 없습니다.`);
         }
 
         lenis.stop()
