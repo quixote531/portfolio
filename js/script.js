@@ -298,7 +298,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     const modalImages = [
         'images/genie-process.png',    
-        'images/findoc_process.jpg',   
+        'images/findoc_process.png',   
         'images/logo-process.png',   
         'images/준비중.png',            
         'images/trip-banner.png',    
